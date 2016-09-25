@@ -22,6 +22,7 @@ class Car extends Vehicle {
   }
 
   start() {
+    super.start();
     console.log('starting Car');
   }
 
