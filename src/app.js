@@ -1,11 +1,10 @@
 class Drone {
-  constructor(id) {
-    console.log('in drone constructor');
-    console.log('id' + id);
+  constructor(id, name) {
+    console.log(id + ' ' + name);
   }
 }
 
-let drone = new Drone('A123')
+let drone = new Drone('A123', 'Flyer')
 
 // console.log(typeof Drone);
 // console.log(typeof drone);
