@@ -1,23 +1,21 @@
 class Drone {
+
   constructor(id, name) {
-    this.id = id;
+    this._id = id;
     this.name = name;
   }
 
-  fly() {
-    console.log('Drone ' + this.id + ' is flying.');
+  get id() {
+    console.log('in id getter');
+    return this._id + 'TEMP';
   }
 
-  // Static Method
-  static getCompany() {
-    console.log('In getCompany');
+  set id(value) {
+    this._id = value
   }
+
 }
 
 let drone = new Drone('A123', 'Flyer')
-let drone2 = new Drone('B456', 'Twirl')
-
-drone.fly();
-drone2.fly();
-Drone.getCompany();
-drone.getCompany(); // throws error
+drone.id = 'B456'
+console.log('DroneID is: ' + drone.id);
