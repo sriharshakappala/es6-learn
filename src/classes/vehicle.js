@@ -1,3 +1,3 @@
-class Vehicle {
+export class Vehicle {
 
 }
