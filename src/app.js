@@ -7,6 +7,7 @@ class Drone {
 
 let drone = new Drone('A123', 'Flyer')
 console.log('drone: ' + drone.id + ' ' + drone.name)
+console.log('drone: ' + drone['id'] + ' ' + drone['name'])
 
 // console.log(typeof Drone);
 // console.log(typeof drone);
