@@ -4,10 +4,14 @@ class Drone {
     this.name = name;
   }
 }
+// Static Properties or Class Properties
+Drone.maxHeight = 2000;
 
 let drone = new Drone('A123', 'Flyer')
-console.log('drone: ' + drone.id + ' ' + drone.name)
-console.log('drone: ' + drone['id'] + ' ' + drone['name'])
+let drone2 = new Drone('B456', 'Twirl')
+console.log(drone.id + ' ' + drone2.id);
+console.log(Drone.maxHeight);
+console.log(drone.maxHeight);
 
 // console.log(typeof Drone);
 // console.log(typeof drone);
