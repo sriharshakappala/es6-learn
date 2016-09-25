@@ -21,6 +21,10 @@ class Car extends Vehicle {
     this.gpsEnabled = false;
   }
 
+  start() {
+    console.log('starting Car');
+  }
+
 }
 
 let c = new Car();
