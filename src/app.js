@@ -4,6 +4,10 @@ class Vehicle {
     this.gpsEnabled = true
   }
 
+  start() {
+    console.log('starting Vehicle');
+  }
+
 }
 
 class Drone extends Vehicle {
@@ -21,3 +25,4 @@ class Car extends Vehicle {
 
 let c = new Car();
 console.log(c.gpsEnabled);
+c.start()
