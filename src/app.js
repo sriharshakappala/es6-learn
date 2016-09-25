@@ -12,3 +12,6 @@ for (let car of dataService.cars)
 
 for (let drone of dataService.drones)
   console.log(drone.license);
+
+for (let e of dataService.errors)
+  console.log(e.message);
