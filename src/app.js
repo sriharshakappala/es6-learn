@@ -18,6 +18,10 @@ import {TitleBar} from './ui/title-bar.js'
 //   console.log(car.make);
 
 let tb = new TitleBar('Our Application');
+tb.addLink('Home', '');
+tb.addLink('Cars', '');
+tb.addLink('Drones', '');
+tb.addLink('Map', '');
 tb.appendToElement($('body'));
 
 // let b = new Button('Click Me');
