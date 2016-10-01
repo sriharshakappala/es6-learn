@@ -1,14 +1,26 @@
 import $ from 'jquery';
-import {Car} from './classes/car.js'
-import {Drone} from './classes/drone.js'
 import {fleet} from './fleet-data.js'
-
 import {FleetDataService} from './services/fleet-data-service.js'
-
+import {ApplicationBase} from './framework/application-base.js'
 import {Button} from './ui/button.js'
 import {Image} from './ui/image.js'
 import {TitleBar} from './ui/title-bar.js'
 import {DataTable} from './ui/data-table.js'
+
+export class App extends ApplicationBase {
+  constructor() {
+    super('Fleet Manager')
+    this.dataService = new FleetDataService()
+    this.dataService.loadData(fleet);
+    this.addRoute('Home', null, true)
+    this.addRoute('Cars', null)
+    this.addRoute('Drones', null)
+    this.addRoute('Map', null)
+  }
+}
+
+export let application = new App();
+application.show($('body'));
 
 let headers = 'License Make Model Miles'.split(' ');
 let dataService = new FleetDataService();
